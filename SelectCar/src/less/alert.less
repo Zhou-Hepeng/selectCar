@@ -1,0 +1,64 @@
+
+/*-----------弹窗--@import "./global";-------*/
+
+.notification {
+  position: fixed;
+  width: 100%;
+  min-height: 3.4rem;
+  top: -2rem;
+  padding-top: 2rem;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background-color: rgba(234,67,53, 0.85);
+  color: white;
+  font-size: .65rem;
+  -webkit-transform: translate3d(0, -100%, 0);
+          transform: translate3d(0, -100%, 0);
+  -webkit-transition:-webkit-transform .4s;
+  transition:transform .4s;
+  opacity: 0;
+}
+.notification.notification-in {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  opacity: 1;
+}
+.notification.touching {
+  -webkit-transition-duration: 0s;
+          transition-duration: 0s;
+}
+.notification .notification-inner {
+  padding:.6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+}
+.notification .notification-content {
+  width: 100%;
+  margin: 0rem .4rem;
+}
+.notification .notification-title {
+  font-weight: 400;
+  font-size:16px;
+  text-align:center;
+  letter-spacing:2px;
+}
+.notification .notification-handle-bar {
+  position: absolute;
+  bottom: .2rem;
+  left: 50%;
+  -webkit-transform: translate3d(-50%, 0, 0);
+          transform: translate3d(-50%, 0, 0);
+  width: 2rem;
+  height: .3rem;
+  border-radius: .15rem;
+  background: white;
+  opacity: .5;
+}
+
